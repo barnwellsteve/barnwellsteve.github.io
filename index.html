@@ -1,195 +1,39 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>.barnwellsteve - technical wanderings</title>
+---
+layout: default
+current: home
+class: 'home-template'
+navigation: True
+---
 
-    <!-- Bootstrap core CSS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+<!-- < default -->
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
 
-
-    <style>
-      body {
-        font-family: 'Noto Sans', sans-serif;
-      }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Husband and father first, Steve has turned an education in digital art/music into a varied work experience filled with learning and occassional success. Here is the documentation of some of the most interesting parts.</p>
+<!-- The big featured header, it uses blog cover image as a BG if available -->
+<header class="site-header outer {% if page.cover or site.cover %}" style="background-image:  url({{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% elsif site.cover %}{{ site.cover }}{% endif %}) {% else %}no-cover{% endif %}">
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                {% if site.logo %}
+                    <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}"/>
+                {% else %}
+                    {{ site.title }}
+                {% endif %}
+            </h1>
+            <h2 class="site-description">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2>
         </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <a href="https://www.twitter.com/barnwellsteve" class="btn btn-outline-light my-2">follow on Twitter</a>
-          <a href="https://www.linkedin.com/in/barnwellsteve/" class="btn btn-outline-info my-2">connect on LinkedIn</a>
-        </div>
-      </div>
+        {% include site-nav.html %}
     </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container d-flex justify-content-between">
-      <a href="/" class="navbar-brand d-flex align-items-center">
-        <span style="font-size: 1.5em;font-weight: 800;"><strong>.barnwellsteve</strong></span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
 </header>
 
-<main role="main">
+<!-- The main content area -->
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
 
-  <section class="jumbotron text-center" style="background-image: url('img/jumbo.jpg');background-size:cover;background-position:center center;margin-bottom:0px!important;">
-    <div class="container">
-      <h1 class="jumbotron-heading" style="color:#CBCBCB;"><span style="background-color:black;padding: 10px;">technical wanderings</span></h1>
-      <p>
-        <a href="posts/tech/" class="btn btn-outline-secondary my-2">tech</a>
-        <a href="posts/education/" class="btn btn-outline-secondary my-2">education</a>
-        <a href="posts/church/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">church</a>
-        <a href="posts/music/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">music</a>
-        <a href="posts/fitness/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">fitness</a>
-        <a href="posts/family/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">family</a>
-        <a href="posts/thoughts/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">thoughts</a>
-      </p>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card mb-6 shadow-lg">
-          <a href="posts/tech/enterprise_shift.html" style="text-decoration:none; text-align:center; color: black;">
-            <img src="img/imaging.jpg" class="card-img-top" alt="Imaging Post Header Image">
-          </a>
-          <a href="posts/tech/enterprise_shift.html" style="text-align:center;text-decoration:none;">
-          <h5 class="card-title" style="padding-top:10px;">Enterprise Shift of Apple Device Management</h5>
-          </a>
-            <div class="card-body">
-              <p class="card-text">We've been hinting at it for a long time - macOS Admins: imaging is dead. It's all part of the Enterprise shift in Apple device management.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a type="button" href="posts/tech/enterprise_shift.html" class="btn btn-sm btn-outline-secondary">Read</a>
-                </div>
-                <small class="text-muted">tech | education</small>
-              </div>
-            </div>
-          </div>
-        </div>     
-        <div class="col-md-6">
-          <div class="card mb-6 shadow-lg">
-          <a href="#" style="text-decoration:none; text-align:center; color: black;">
-            <img src="img/mosyle.jpg" class="card-img-top" alt="Imaging Post Header Image">
-          </a>
-          <a href="#" style="text-align:center;text-decoration:none;">
-          <h5 class="card-title" style="padding-top:10px;">Honest Take on Mosyle as an MDM</h5>
-          </a>
-            <div class="card-body">
-              <p class="card-text">3,700 iPads + 200 iMacs + 700 AppleTVs = 1 MDM (and me)</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a type="button" class="btn btn-sm btn-outline-secondary">Read</a>
-                </div>
-                <small class="text-muted">tech | education</small>
-              </div>
-            </div>
-          </div>
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+            {%  include post-card.html %}
         </div>
-                
-      </div>
-      
-      <div class="row" style="margin-top: 20px;">
-      	<div class="col-md-4">
-         <div class="card mb-4 shadow-sm">
-      	  <a href="#" style="text-decoration:none; text-align:center; color:black;">
-      	   <img src="img/tvOS-ADE.jpg" class="card-img-top" alt="tvOS Device Enrollment">
-      	  </a>
-      	  <a href="#" style="text-align:center;text-decoration:none; color:#007284;">
-      	   <h5 class="card-title" style="padding-top:10px;">tvOS Automated Device Enrollment</h5>
-      	  </a>
-      	  <div class="card-body">
-      	   <p class="card-text">From the box to Conference Room Mode: 3 cables, no remotes. The lessons learned and the best solutions that worked for me in a 650+ AppleTV environment.</p>
-      	    <div class="d-flex justify-content-between align-items-center">
-      		 <div class="btn-group">
-      		  <a type="button" class="btn btn-sm btn-outline-secondary">Read</a>
-      		 </div>
-      		 <small class="text-muted">tech | education</small>
-      		</div>
-      	   </div>
-      	  </div>
-      	 </div>
-      	 
-      	<div class="col-md-4">
-         <div class="card mb-4 shadow-sm">
-      	  <a href="#" style="text-decoration:none; text-align:center; color:black;">
-      	   <img src="img/friday-desk.jpg" class="card-img-top" alt="Pursuing the Friday Desk">
-      	  </a>
-      	  <a href="#" style="text-align:center;text-decoration:none;">
-      	   <h5 class="card-title" style="padding-top:10px;">Pursuing the "Friday Desk"</h5>
-      	  </a>
-      	  <div class="card-body">
-      	   <p class="card-text">June of 2018... the last time my desk looked this clean. This past year has been the constant (failing) pursuit of the elusive "Friday Desk."</p>
-      	    <div class="d-flex justify-content-between align-items-center">
-      		 <div class="btn-group">
-      		  <a type="button" class="btn btn-sm btn-outline-secondary">Read</a>
-      		 </div>
-      		 <small class="text-muted">tech | education</small>
-      		</div>
-      	   </div>
-      	  </div>
-      	 </div>
-      </div>
 
     </div>
-  </div>
-
-
 </main>
-
-<footer class="text-muted" style="background-color:#333;">
-  <div class="container" style="text-align: center;">
-        <a href="posts/tech/" class="btn btn-outline-secondary my-2">tech</a>
-        <a href="posts/education/" class="btn btn-outline-secondary my-2">education</a>
-        <a href="posts/church/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">church</a>
-        <a href="posts/music/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">music</a>
-        <a href="posts/fitness/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">fitness</a>
-        <a href="posts/family/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">family</a>
-        <a href="posts/thoughts/" class="btn btn-outline-secondary my-2 disabled" aria-disabled="true">thoughts</a>
-  </div>
-  <div class="containter" style="text-align: center">
-  <span class="text-muted">images from <a href="https://unsplash.com">Unsplash</a></span>
-  </div>
-</footer>
-<div class="sub-footter" style="background-color:black;padding: 10px;color:#cbcbcb;text-align:center;"><span style="display:inline-block;">Steve Barnwell - 2019</span></div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
-</html>
