@@ -71,8 +71,8 @@ repo:
 branch:
 relative_source:
 destination:
-production_url:  https://barnwellsteve.com
-source_url:  https://barnwellsteve.com
+production_url:  https://barnwellsteve.com/
+source_url:  https://barnwellsteve.com/
 
 exclude:
   - assets/css
