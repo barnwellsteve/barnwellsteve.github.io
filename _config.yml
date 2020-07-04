@@ -6,7 +6,7 @@ language: 'en-uk'
 words_per_minute: 200
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /
+baseurl: barnwellsteve.com/
 
 # Website info
 title: barnwellsteve
@@ -69,7 +69,7 @@ lsi: False
 username: barnwellsteve
 repo:
 branch:
-relative_source: 
+relative_source:
 destination:
 production_url:  https://barnwellsteve.com
 source_url:  https://barnwellsteve.com
