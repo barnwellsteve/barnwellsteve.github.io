@@ -5,7 +5,7 @@ cover: assets/images/imaging.jpg
 navigation: True
 title: The Enterprise Shift of Apple Device Management
 date: 2018-12-09 10:10:00
-tags: MDM,UEM,ECCM
+tags: endpoint
 class: post-template
 subclass: 'post'
 logo: assets/images/favicon.png
