@@ -10,7 +10,6 @@ class: post-template
 subclass: 'post'
 logo: assets/images/favicon.png
 author: barnwellsteve
-cred: @0asa
 ---
 
 This post was originally presented as a session for TCEA's Leadership Summit in December 2018.
