@@ -3,11 +3,11 @@ barnwellsteve:
   name: Steve
   url_full: https://barnwellsteve.com
   url: barnwellsteve.com
-  bio: Device administration architect
+  bio: Technical Solutionist, Overthinker for Hire, Device Administration Architect
   picture: assets/images/steve.png
   facebook: False
   twitter: barnwellsteve
-  cover: False
+  cover: assets/images/steve-cover.jpg
 hannah:
   username: hannah
   name: Hannah Wolfe
