@@ -19,17 +19,6 @@ hannah:
   facebook: False
   twitter: erisds
   cover: assets/images/hannah-cover.jpg
-barnwellsteve:
-  username: barnwellsteve
-  name: Steve Barnwell
-  location: Cibolo, TX
-  url_full: https://barnwellsteve.com
-  url: barnwellsteve.com
-  bio: Technical Solutionist, Overthinker for Hire, Device Administration Architect
-  picture: assets/images/steve.jpg
-  facebook: False
-  twitter: barnwellsteve
-  cover: assets/images/steve-cover.jpg
 john:
   username: john
   name: John O'Nolan
