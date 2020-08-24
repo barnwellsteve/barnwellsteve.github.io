@@ -1,12 +1,10 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: 'barnwellsteve'
+description: 'technical wandering | overthinker for hire'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: ''
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+email: 'barnwellsteve@gmail.com'
 
 include: ["_pages"]
 permalink: /:title/
@@ -34,6 +32,14 @@ authors:
       bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
       email:          fakemail@gmail.com
       twitter:        https://twitter.com/wowthemesnet
+
+    steve:
+      name:           Steve
+      site:           https://www.barnwellsteve.com
+      avatar:         /assets/images/avatar2.jpg
+      bio:            "technology solutionist, endpoint administration, trainer"
+      email:          barnwellsteve@gmail.com
+      twitter:        https://twitter.com/barnwellsteve
 
 # Defaults
 defaults:
