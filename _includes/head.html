@@ -51,7 +51,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}"
+        "@id": "{{ site.url }}{% if site.baseurl %}/{% endif %}{{ page.url | remove_first: '/' }}"
     },
     "description": "{% if excerpt %}{{ excerpt }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
 }
