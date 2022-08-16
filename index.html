@@ -62,6 +62,18 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+      h2 > a {
+  		text-decoration: underline 0.15em rgba(0, 0, 0, 1);
+  		color: white;
+  		text-underline-offset: 0.1em;
+		text-decoration-style: dotted;
+  		transition: text-decoration-color 300ms;
+	  }
+
+	  h2 > a:hover {
+  		text-decoration-color: #01aeef;
+  		color: #01aeef;
+	  }
     </style>
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
@@ -84,6 +96,9 @@
           <li class="nav-item">
             <a class="nav-link" href="https://barnwellsteve.com/pep/">Pep Talk Generator</a>
           </li>
+          <li class="nav-item">
+          	<a class="nav-link" href="https://barnwellsteve.com/music/">Music</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -103,23 +118,23 @@
       <img src="steveicon.png" class="img-fluid" alt="barnwellsteve icon">
 	</div>
 	<div class="col-10">
-     <h2>I’m a husband and girl-dad, digital wheelwright, fitness practitioner, former pastor, hobbyist musician, and unapologetic millennial</h2>
+     <h2>I’m a <a href="#">husband and girl-dad</a>, <a href="#">digital wheelwright</a>, <a href="#">fitness practitioner</a>, <a href="#">former pastor</a>, <a href="https://barnwellsteve.com/music/">hobbyist musician</a>, and unapologetic millennial</h2>
      <br/>
-     <h2>I believe the future is full of <span style="color:#01aeef;">high</span> and <span style="color:#01aeef;">light</span> technology</h2>
+     <h2>I believe the future is full of <a href="#"><span style="color:#01aeef;">high</span> and <span style="color:#01aeef;">light</span> technology</a></h2>
     </div>
   <hr width="100%" style="margin-top:10px;">
   </div>
   <div class="row">
   <h2>find me in real life:</h2>
-  <p>→ I’m currently the Enterprise Systems Manager at <a href="https://www.scuc.txed.net" style="color:#01aeef;">SCUC ISD</a> in Schertz, Texas (USA)</p>
+  <p>→ I’m currently the Enterprise Systems Manager at <a class="btn btn-info" href="https://www.scuc.txed.net">SCUC ISD</a> in Schertz, Texas (USA)</p>
   <br/><br/>
   <h2>my latest project:</h2>
-  <p>→ <a href="https://barnwellsteve.com/pep/" style="color:#9619bb">Pep Talk Generator!</a> ✋</p>
+  <p>→ <a class="btn btn-primary" href="https://barnwellsteve.com/pep/">Pep Talk Generator!</a> ✋</p>
   <br/><br/>
   <h2>find me online:</h2>
-  <p>→ Twitter: <a href="https://www.twitter.com/barnwellsteve" style="color:#01aeef;">@barnwellsteve</a></p>
-  <p>→ Instagram: <a href="https://www.instagram.com/barnwellsteve" style="color:#01aeef;">@barnwellsteve</a></p>
-  <p>→ GitHub: <a href="https://www.github.com/barnwellsteve" style="color:#01aeef;">@barnwellsteve</a></p>
+  <p>→ Twitter: <a class="btn btn-info" href="https://www.twitter.com/barnwellsteve">@barnwellsteve</a></p>
+  <p>→ Instagram: <a class="btn btn-warning" href="https://www.instagram.com/barnwellsteve">@barnwellsteve</a></p>
+  <p>→ GitHub: <a class="btn btn-light" href="https://www.github.com/barnwellsteve">@barnwellsteve</a></p>
   </div>
   </div>
 </main>
